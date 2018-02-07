@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2876382894
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dc39b383f80688dfb6b441d5f88b0da7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21f0dc8ebad690f009368069428e0a1a
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/Scenes/Scene1/Sprites/Icon.png
+Dependencies: []

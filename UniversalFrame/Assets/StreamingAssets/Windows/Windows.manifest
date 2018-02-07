@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2735924992
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: scene1/gameobject.ld
+      Dependencies:
+        Dependency_0: scene1/materials.ld
+    Info_1:
+      Name: scene1/sprites.ld
+      Dependencies: {}
+    Info_2:
+      Name: scene1.u3d
+      Dependencies:
+        Dependency_0: scene1/gameobject.ld
+    Info_3:
+      Name: scene1/materials.ld
+      Dependencies:
+        Dependency_0: scene1/sprites.ld
