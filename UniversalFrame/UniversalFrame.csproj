@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{AED724E7-0D4A-C869-F6D7-3A556F72CB0C}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp.dll</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -50,31 +50,31 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>D:/soft/Unity3d/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>D:/soft/Unity3d/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/soft/Unity3d/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+      <HintPath>D:/soft/Unity3d/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:/soft/Unity3d/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>D:/soft/Unity3d/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+      <HintPath>D:/soft/Unity3d/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>D:/soft/Unity3d/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+      <HintPath>D:/soft/Unity3d/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Asset\NativeLoader\NativeResLoader.cs" />
     <Compile Include="Assets\Scripts\Base\IAssetBase.cs" />
     <Compile Include="Assets\Scripts\Base\IMonoBase.cs" />
+    <Compile Include="Assets\Scripts\Base\INetBase.cs" />
     <Compile Include="Assets\Scripts\Base\IUIPanelBase.cs" />
     <Compile Include="Assets\Scripts\Base\ManagerBase.cs" />
     <Compile Include="Assets\Scripts\Base\MsgBase.cs" />
@@ -98,8 +99,17 @@
     <Compile Include="Assets\Scripts\IPathTools.cs" />
     <Compile Include="Assets\Scripts\Manager\AssetManager.cs" />
     <Compile Include="Assets\Scripts\Manager\MsgCenter.cs" />
+    <Compile Include="Assets\Scripts\Manager\NetManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIEventMsgID.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Net\NetMsgBase.cs" />
+    <Compile Include="Assets\Scripts\Net\NetSocket.cs" />
+    <Compile Include="Assets\Scripts\Net\NetWorkToServer.cs" />
+    <Compile Include="Assets\Scripts\Net\SocketBuffer.cs" />
+    <Compile Include="Assets\Scripts\Net\TcoSocket.cs" />
+    <Compile Include="Assets\Scripts\Net\TCPConnectMsg.cs" />
+    <Compile Include="Assets\Scripts\Net\TCPMsg.cs" />
+    <Compile Include="Assets\Scripts\ProtoBuff\IProtoBuff.cs" />
     <Compile Include="Assets\Scripts\UI\LoadPanel.cs" />
     <Compile Include="Assets\Scripts\UI\UIBehavior.cs" />
   </ItemGroup>
