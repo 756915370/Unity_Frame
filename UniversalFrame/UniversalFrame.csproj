@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.1.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -102,13 +104,17 @@
     <Compile Include="Assets\Scripts\Manager\NetManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIEventMsgID.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Net\Msg\UDPMsg.cs" />
+    <Compile Include="Assets\Scripts\Net\Msg\UDPSendMsg.cs" />
+    <Compile Include="Assets\Scripts\Net\UDPSocket.cs" />
     <Compile Include="Assets\Scripts\Net\NetMsgBase.cs" />
     <Compile Include="Assets\Scripts\Net\NetSocket.cs" />
     <Compile Include="Assets\Scripts\Net\NetWorkToServer.cs" />
     <Compile Include="Assets\Scripts\Net\SocketBuffer.cs" />
     <Compile Include="Assets\Scripts\Net\TcoSocket.cs" />
-    <Compile Include="Assets\Scripts\Net\TCPConnectMsg.cs" />
-    <Compile Include="Assets\Scripts\Net\TCPMsg.cs" />
+    <Compile Include="Assets\Scripts\Net\Msg\TCPConnectMsg.cs" />
+    <Compile Include="Assets\Scripts\Net\Msg\TCPMsg.cs" />
+    <Compile Include="Assets\Scripts\Net\UDPSocketBase.cs" />
     <Compile Include="Assets\Scripts\ProtoBuff\IProtoBuff.cs" />
     <Compile Include="Assets\Scripts\UI\LoadPanel.cs" />
     <Compile Include="Assets\Scripts\UI\UIBehavior.cs" />

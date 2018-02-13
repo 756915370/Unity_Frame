@@ -7,8 +7,8 @@ public enum TCPEvent
 {
     TcpConnect = ManagerID.NetManager + 1,
     TcpSendMsg,
-
-
+    
+    MaxValue
 }
 
 public class TcoSocket : INetBase {
