@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Prefabs/Scenes/Scene1/Scene1.unity
+- path: Assets/ToLua/Examples/23_List/UseList.unity
   isLoaded: 1
   isActive: 1

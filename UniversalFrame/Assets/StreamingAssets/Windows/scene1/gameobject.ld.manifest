@@ -3,7 +3,7 @@ CRC: 1036397078
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f18516a795d28ef02034b4d4a8ace98b
+    Hash: 00238f506118c0441790fe9ecf597486
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0615fdd8182050e228ba12bfa176028d
@@ -26,4 +26,4 @@ ClassTypes:
 Assets:
 - Assets/Prefabs/Scenes/Scene1/GameObject/Cube.prefab
 Dependencies:
-- E:/UniversalFrame/Assets/StreamingAssets/Windows/scene1/materials.ld
+- D:/soft/Unity3d Project/Unity_Frame/UniversalFrame/Assets/StreamingAssets/Windows/scene1/materials.ld

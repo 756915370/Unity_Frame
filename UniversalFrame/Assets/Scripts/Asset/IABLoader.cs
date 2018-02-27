@@ -11,7 +11,8 @@ public delegate void LoadFinish(string bundle);
 public class IABLoader
 {
     private string mBundleName;
-    private string mBundlePath;
+    private string mBundleWWWPath;
+    private string mBundleFilePath;
     private WWW mLoader;
     private float mLoadProcess;
     private event LoaderProgress LoadProgressEvent;
@@ -20,7 +21,7 @@ public class IABLoader
     public IABLoader(LoaderProgress loaderProgress,LoadFinish loadFinish)
     {
         mBundleName = "";
-        mBundlePath = "";
+        mBundleWWWPath = "";
         mLoadProcess = 0;
         LoadProgressEvent = loaderProgress;
         LoadFinishEvent = loadFinish;
@@ -34,28 +35,52 @@ public class IABLoader
     /// 赋值AB包路径
     /// </summary>
     /// <param name="path">完整路径</param>
-    public void LoadResources(string path)
+    public void LoadResources(string pathWWW,string pathFile)
     {
-        mBundlePath = path;
+        mBundleWWWPath = pathWWW;
+        mBundleFilePath = pathFile;
     }
 
     public IEnumerator LoadAB()
     {
-        mLoader = new WWW(mBundlePath);
-        while (!mLoader.isDone)
+        //WWW类加载方法
+        //mLoader = new WWW(mBundleWWWPath);
+        //while (!mLoader.isDone)
+        //{
+        //    mLoadProcess = mLoader.progress;
+        //    if (LoadProgressEvent != null)
+        //    {
+        //        LoadProgressEvent.Invoke(mBundleName, mLoadProcess);
+        //    }
+        //    yield return mLoader.progress;
+        //    mLoadProcess = mLoader.progress;
+        //}
+        ////加载完成
+        //if (mLoadProcess >= 1.0f)
+        //{
+        //    mABResLoader = new IABResLoader(mLoader.assetBundle);
+        //    if (LoadProgressEvent != null)
+        //    {
+        //        LoadProgressEvent.Invoke(mBundleName, mLoadProcess);
+        //    }
+        //    if (LoadFinishEvent != null)
+        //    {
+        //        LoadFinishEvent(mBundleName);
+        //    }
+
+        //}
+        //else
+        //{
+        //    Debug.LogError("加载Bundle错误" + mBundleName);
+        //}
+        //mLoader = null;
+        //使用LoadFromFileAsync
+        AssetBundleCreateRequest createRequest = AssetBundle.LoadFromFileAsync(mBundleFilePath);
+        yield return createRequest;
+        if (createRequest.assetBundle != null)
         {
-            mLoadProcess = mLoader.progress;
-            if (LoadProgressEvent != null)
-            {
-                LoadProgressEvent.Invoke(mBundleName, mLoadProcess);
-            }
-            yield return mLoader.progress;
-            mLoadProcess = mLoader.progress;
-        }
-        //加载完成
-        if (mLoadProcess >= 1.0f)
-        {
-            mABResLoader = new IABResLoader(mLoader.assetBundle);
+            mLoadProcess = 1;
+            mABResLoader = new IABResLoader(createRequest.assetBundle);
             if (LoadProgressEvent != null)
             {
                 LoadProgressEvent.Invoke(mBundleName, mLoadProcess);
@@ -64,7 +89,6 @@ public class IABLoader
             {
                 LoadFinishEvent(mBundleName);
             }
-           
         }
         else
         {

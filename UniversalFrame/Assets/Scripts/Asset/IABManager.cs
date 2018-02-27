@@ -17,7 +17,11 @@ public class AssetObj
     {
         for (int i = 0; i < mObjList.Count; i++)
         {
-            Resources.UnloadAsset(mObjList[i]);
+            if (mObjList.GetType() != typeof(GameObject))
+            {
+                //只能卸载非实例化出来的物体
+                Resources.UnloadAsset(mObjList[i]);
+            }
         }
     }
 }
@@ -139,6 +143,32 @@ public class IABManager
             {
                 iABRelationManager.Dispose();
                 mABRelationDict.Remove(bundlePath);
+            }
+        }
+    }
+
+    public void DisposeBundleAndObjs(string bundlePath)
+    {
+        if (mABRelationDict.ContainsKey(bundlePath))
+        {
+            IABRelationManager iABRelationManager = mABRelationDict[bundlePath];
+            List<string> dependenceList = iABRelationManager.GetDependences();
+            for (int i = 0; i < dependenceList.Count; i++)
+            {
+                if (mABRelationDict.ContainsKey(dependenceList[i]))
+                {
+                    IABRelationManager dependence = mABRelationDict[dependenceList[i]];
+                    if (dependence.RemoveReference(bundlePath))
+                    {
+                        DisposeBundle(dependence.BundlePath);
+                    }
+                }
+            }
+            if (iABRelationManager.GetReferences().Count <= 0)
+            {
+                iABRelationManager.Dispose();
+                mABRelationDict.Remove(bundlePath);
+                DisposeResObjs(bundlePath);
             }
         }
     }

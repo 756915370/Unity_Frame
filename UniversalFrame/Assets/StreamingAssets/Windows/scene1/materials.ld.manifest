@@ -3,7 +3,7 @@ CRC: 2873663454
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8c403989d5744118abfca6470413c483
+    Hash: 109593847a88b5b8f6ad12465ebd1854
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8d068741ae817c9b5c92580f37de87e3
@@ -18,4 +18,4 @@ ClassTypes:
 Assets:
 - Assets/Prefabs/Scenes/Scene1/Materials/Black.mat
 Dependencies:
-- E:/UniversalFrame/Assets/StreamingAssets/Windows/scene1/sprites.ld
+- D:/soft/Unity3d Project/Unity_Frame/UniversalFrame/Assets/StreamingAssets/Windows/scene1/sprites.ld

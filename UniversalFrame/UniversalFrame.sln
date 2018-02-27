@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFrame", "Universal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFrame.Editor", "UniversalFrame.Editor.csproj", "{3C675E56-67F0-4BEF-B49A-2A5DA2A046CE}"
 EndProject
+Project("{5697748A-77EF-44CA-8824-4F5637E5945B}") = "Lua", "Assets\Lua.luaproj", "{E439935D-B2A2-46AE-856D-2AA408428F33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{3C675E56-67F0-4BEF-B49A-2A5DA2A046CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C675E56-67F0-4BEF-B49A-2A5DA2A046CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C675E56-67F0-4BEF-B49A-2A5DA2A046CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

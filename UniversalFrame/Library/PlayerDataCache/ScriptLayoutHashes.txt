@@ -9,3 +9,4 @@ b8f057a5d96b66234b3230a0d800dcf6 UnityEngine.UI.dll:UnityEngine.UI.Image
 a4ef7c59ab7201ab109de36901ceb49b UnityEngine.UI.dll:UnityEngine.EventSystems.StandaloneInputModule
 769e576fcd3f60fa29a2cccb9e8127d9 UnityEngine.UI.dll:UnityEngine.UI.Text
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.UIBehavior
+1d4e393238066ca09b77427133a97ed4 Assembly-CSharp.dll:.NativeResLoader

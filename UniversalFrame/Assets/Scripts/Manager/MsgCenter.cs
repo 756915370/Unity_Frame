@@ -15,6 +15,10 @@ public class MsgCenter : MonoBehaviour
         gameObject.AddComponent<UIManager>();
         gameObject.AddComponent<AssetManager>();
         gameObject.AddComponent<ILoaderManager>();
+        gameObject.AddComponent<NetManager>();
+        gameObject.AddComponent<LuaEventProcess>();
+        LuaAndCMsgCenter luaAndCMsgCenter = gameObject.AddComponent<LuaAndCMsgCenter>();
+        LuaEventProcess.Instance.SettingChild(luaAndCMsgCenter);
     }
    
     public void SendToMsg(MsgBase msg)
@@ -24,6 +28,10 @@ public class MsgCenter : MonoBehaviour
     private void AnalysisMsg(MsgBase msg)
     {
         ManagerID managerID = msg.GetManagerID();
+        if ((ushort)managerID < (ushort)ManagerID.GameManager)
+        {
+            LuaEventProcess.Instance.ProcessEvent(msg);
+        }
         switch (managerID)
         {
             case ManagerID.GameManager:

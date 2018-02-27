@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1982293067
+CRC: 1261979134
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5c242e99148ba2b2eca9c108f99cb45d
+    Hash: 56d5a934634655667089cbc517efc90d
   TypeTreeHash:
     serializedVersion: 2
     Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
@@ -12,4 +12,4 @@ ClassTypes: []
 Assets:
 - Assets/Prefabs/Scenes/Scene1/Scene1.unity
 Dependencies:
-- E:/UniversalFrame/Assets/StreamingAssets/Windows/scene1/gameobject.ld
+- D:/soft/Unity3d Project/Unity_Frame/UniversalFrame/Assets/StreamingAssets/Windows/scene1/gameobject.ld

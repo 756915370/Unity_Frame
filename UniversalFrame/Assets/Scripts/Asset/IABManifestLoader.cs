@@ -26,7 +26,8 @@ public class IABManifestLoader
         ABManifest = null;
         ManifestLoader = null;
         mIsLoadFinish = false;
-        ManifestPath = IPathTools.GetWWWAssetBundlePath() + "/" + IPathTools.GetPlatformFolderName(Application.platform);
+        //ManifestPath = IPathTools.GetWWWAssetBundlePath() + "/" + IPathTools.GetPlatformFolderName(Application.platform);
+        ManifestPath = IPathTools.GetAssetBundlePath() + "/" + IPathTools.GetPlatformFolderName(Application.platform);
     }
     public void SetManifestPath(string path)
     {
@@ -38,21 +39,34 @@ public class IABManifestLoader
     }
     public IEnumerator LoadManifest()
     {
-        WWW manifest = new WWW(ManifestPath);
-        Debug.Log(ManifestPath);
-        yield return manifest;
-        if (!string.IsNullOrEmpty(manifest.error))
+        //WWW方式加载
+        //WWW manifest = new WWW(ManifestPath);
+        //Debug.Log(ManifestPath);
+        //yield return manifest;
+        //if (!string.IsNullOrEmpty(manifest.error))
+        //{
+        //    Debug.Log(manifest.error);
+        //}
+        //else
+        //{
+        //    if (manifest.progress >= 1.0f)
+        //    {
+        //        ManifestLoader = manifest.assetBundle;
+        //        ABManifest = ManifestLoader.LoadAsset("AssetBundleManifest") as AssetBundleManifest;
+        //        mIsLoadFinish = true;
+        //    }
+        //}
+        AssetBundleCreateRequest createRequest = AssetBundle.LoadFromFileAsync(ManifestPath);
+        yield return createRequest;
+        if (createRequest.assetBundle != null)
         {
-            Debug.Log(manifest.error);
+            ManifestLoader = createRequest.assetBundle;
+            ABManifest=ManifestLoader.LoadAsset("AssetBundleManifest") as AssetBundleManifest;
+            mIsLoadFinish = true;
         }
         else
         {
-            if (manifest.progress >= 1.0f)
-            {
-                ManifestLoader = manifest.assetBundle;
-                ABManifest = ManifestLoader.LoadAsset("AssetBundleManifest") as AssetBundleManifest;
-                mIsLoadFinish = true;
-            }
+            Debug.LogError("加载manifest错误");
         }
     }
     public string[] GetDependences(string name)

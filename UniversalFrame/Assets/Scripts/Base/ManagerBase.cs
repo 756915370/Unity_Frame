@@ -134,4 +134,14 @@ public class ManagerBase : IMonoBase
             }
         }
     }
+    private void OnDestroy()
+    {
+        List<ushort> tempKeys = new List<ushort>(eventTree.Keys);
+        for (int i = 0; i < tempKeys.Count; i++)
+        {
+            eventTree[tempKeys[i]] = null;
+        }
+        eventTree.Clear();
+        System.GC.Collect();
+    }
 }

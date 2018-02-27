@@ -25,6 +25,7 @@ public class LoadPanel : IUIPanelBase
            (ushort)UIEventID.Register
        };
         RegisterSelf(this, msgIds);
+        Debug.Log(transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition);
     }
     private void Start()
     {

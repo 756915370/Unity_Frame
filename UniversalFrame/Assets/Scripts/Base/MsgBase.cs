@@ -16,6 +16,9 @@ public class MsgBase
         int tempiD = msgId / FrameTools.MsgSpan;
         return (ManagerID)(tempiD * 3000);
     }
-    
+    public virtual byte GetState()
+    {
+        return 127;
+    }
 
 }

@@ -46,8 +46,9 @@ public class IABRelationManager
         mLoaderProgress = progress;
         mABLoader = new IABLoader(progress, BundleLoadFinish);
         mABLoader.SetBundleName(bundlePath);
-        string fullPath = IPathTools.GetWWWAssetBundlePath() + "/" + bundlePath;
-        mABLoader.LoadResources(fullPath);
+        string fullPathWWW = IPathTools.GetWWWAssetBundlePath() + "/" + bundlePath;
+        string fullPathFile = IPathTools.GetAssetBundlePath() + "/" + bundlePath;
+        mABLoader.LoadResources(fullPathWWW,fullPathFile);
     }
     public void AddReference(string bundlePath)
     {
